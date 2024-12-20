@@ -210,7 +210,7 @@ button:active {
 /* Mobile-first responsiveness */
 @media (max-width: 767px) {
   .banner {
-    padding: 15px; /* Adjust padding for smaller screens */
+    padding: 0px; /* Adjust padding for smaller screens */
   }
   .banner-item img {
     width: 30px; /* Smaller icons for mobile */
