@@ -1,0 +1,86 @@
+/* Navbar item styling */
+.navbar-item {
+    padding: 1rem;
+    color: #333;
+}
+
+/* General navbar styling */
+.navbar {
+    position: fixed; /* Fix navbar to the left */
+    top: 0;
+    left: 0;
+    width: 100px; /* Fixed width for navbar */
+    height: 100vh; /* Full height */
+    background-color: #444; /* Dark background color */
+    padding: 10px;
+    flex-direction: column;
+    justify-content: center;
+    display: flex; /* Vertical stacking of navbar items */
+    z-index: 1000; /* Ensure navbar is on top of other content */
+}
+
+/* Navbar links styling */
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+    padding: 10px;
+    font-size: 16px;
+    display: block; /* Make each link occupy a full line */
+}
+
+/* Hover effect on navbar links */
+.navbar a:hover {
+    background-color: #555; /* Add hover effect */
+}
+
+/* Adjustments for content area to avoid overlapping with the navbar */
+.main {
+    display: flex;
+    margin-left: 250px; /* Leave space for the navbar */
+    height: 100vh;
+}
+
+/* Tablet and above (min-width: 768px) */
+@media (min-width: 768px) {
+    .main {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .navbar li {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+     }
+
+    /* Optionally adjust the navbar width for larger screens */
+    .navbar {
+        width: 150px; /* Keep navbar width fixed for larger screens */
+    }
+}
+
+/* Desktop and above (min-width: 1024px) */
+@media (min-width: 1024px) {
+    .navbar {
+        padding: 20px; /* Increase padding for larger screens */
+    }
+    .navbar li {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+     }
+
+    .logo img {
+        max-height: 100px; /* Adjust logo size for larger screens */
+    }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+
+    .navbar li {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+     }
+}

@@ -1,0 +1,20 @@
+@import 'variables'; // Import variables
+@import 'components/navbar'; // Import navbar partial
+@import 'components/banner'; // Import banner partial (without leading slash)
+
+/* Styling for h1 */
+h1 {
+    color: $Maincolor;
+}
+
+/* Styling for body */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Styling for the main container */
+.main {
+    display: flex;
+    flex-direction: column;
+}

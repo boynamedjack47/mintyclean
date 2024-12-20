@@ -1,0 +1,51 @@
+@import '../variables';
+
+
+/* Banner styling */
+.banner {
+    display: flex;
+    justify-content: center; /* Center the logo horizontally */
+    align-items: center; /* Center the logo vertically */
+    background-color: $Maincolor; /* Add background color for the banner */
+    padding: 20px 0; /* Adjust padding to add spacing around the logo */
+    height: 75px; /* You can adjust the height as needed */
+}
+
+/* Logo styling */
+.logo img {
+    max-width: 90%; /* Allow the image to scale to 90% of the banner's width */
+    height: auto; /* Maintain the aspect ratio */
+    max-height: 250px; /* Set a max height for the logo to make it larger but not exceed this size */
+}
+
+/* Mobile (less than 768px) */
+@media (max-width: 767px) {
+    .banner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 75px; /* Reduce banner height for mobile */
+        padding: 10px 0; /* Reduce padding on mobile */
+    }
+
+    .logo img {
+        max-width: 100%; /* Scale the logo to 80% of the banner width on mobile */
+        max-height: 150px; /* Adjust the max-height for the logo on mobile */
+    display: flex;
+    justify-content: center;
+   
+    }
+}
+
+/* Tablet and above (min-width: 768px) */
+@media (min-width: 768px) {
+    .banner {
+        height: 75px; /* Keep a larger height for tablets and above */
+        padding: 20px 0; /* Maintain padding for larger screens */
+    }
+
+    .logo img {
+        max-width: 90%; /* Keep the logo at 90% width for tablet and larger screens */
+        max-height: 250px; /* Keep max height for larger screens */
+    }
+}
