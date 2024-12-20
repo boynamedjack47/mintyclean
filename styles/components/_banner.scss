@@ -1,56 +1,60 @@
-@import '../variables';  // Adjust the path as needed
+@import '../variables';  // Ensure correct path to variables.scss
 
 @import 'mixin';  
 @import '../variables';  // Ensure correct path to variables.scss
 
+/* Banner Styling */
 .banner {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(51, 51, 51, 0.9);
-    padding: 20px;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    background-color: rgba(51, 51, 51, 0.9); /* Darker transparent background */
+     /* Adjust padding to create space around the content */
+    min-height: 80px; /* Ensure a minimum height for the banner, if necessary */
     width: 100%;
 }
 
 .banner-item {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center; /* Center the content inside the item */
+    color: white; /* Set text color to white */
+    margin: 0 20px; /* Add spacing between banner items */
 }
 
 .banner-item img {
-    width: 40px;
+    width: 40px; /* Icon size */
     height: 40px;
-    margin-bottom: 10px;
+    margin-bottom: 10px; /* Space between icon and text */
 }
 
 .banner-item p {
-    color: white;
-    font-size: 1.2rem;
-    margin: 0;
+    font-size: 1.2rem; /* Adjust font size */
+    margin: 0; /* Remove default margin */
 }
 
+/* Button Styling */
 button {
-   @include button-style($maincolor);
+   @include button-style($maincolor); /* Reuse the button style mixin */
 }
 
-/* Mobile responsiveness */
+/* Mobile-first responsiveness */
 @media (max-width: 767px) {
     .banner {
-        height: 80px;
+        padding: 15px; /* Adjust padding for smaller screens */
     }
 
     .banner-item img {
-        width: 30px;
+        width: 30px; /* Smaller icons for mobile */
         height: 30px;
     }
 
     .banner-item p {
-        font-size: 1rem;
+        font-size: 1rem; /* Smaller font size for mobile */
     }
 
     button {
-        background-color: $maincolor; // Ensure this rule is within media query
+        background-color: $maincolor; /* Ensure the button uses main color */
     }
 }
 

@@ -110,71 +110,77 @@ body {
   }
 }
 .content {
-  flex-grow: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-image: url("/images/cover.jpg");
+  justify-content: center; /* Vertically center the content */
+  align-items: center; /* Horizontally center the content */
+  background-image: url("/images/cover.jpg"); /* Adjust the path as needed */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  padding-top: 50%;
-  height: calc(100vh - 26%);
+  padding: 50px 0; /* Adds vertical padding for spacing */
+  min-height: 100vh; /* Minimum height for content to ensure it's large enough */
 }
 .content h1 {
   margin: 0;
   font-size: 2rem;
-  color: white;
+  color: black;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
 }
-
-#content-body {
+.content #content-body {
   width: 100%;
   text-align: center;
-  color: white;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+  color: black;
+  text-shadow: 0px 0px 0px rgba(0, 0, 0, 0.8);
 }
 
 .page {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: 100vh; /* Full viewport height */
 }
 .page .navbar {
-  z-index: 10;
+  z-index: 10; /* Ensure it stays on top of the content */
 }
 .page .content {
-  flex-grow: 1;
+  flex-grow: 1; /* Automatically fill the remaining space */
+  display: flex; /* Use flexbox to align content */
+  flex-direction: column; /* Keep content in a column */
+  justify-content: center; /* Center vertically */
+  align-items: center; /* Center horizontally */
 }
 
+/* Banner Styling */
 .banner {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: rgba(51, 51, 51, 0.9);
-  padding: 20px;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  background-color: rgba(51, 51, 51, 0.9); /* Darker transparent background */
+  /* Adjust padding to create space around the content */
+  min-height: 80px; /* Ensure a minimum height for the banner, if necessary */
   width: 100%;
 }
 
 .banner-item {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center; /* Center the content inside the item */
+  color: white; /* Set text color to white */
+  margin: 0 20px; /* Add spacing between banner items */
 }
 
 .banner-item img {
-  width: 40px;
+  width: 40px; /* Icon size */
   height: 40px;
-  margin-bottom: 10px;
+  margin-bottom: 10px; /* Space between icon and text */
 }
 
 .banner-item p {
-  color: white;
-  font-size: 1.2rem;
-  margin: 0;
+  font-size: 1.2rem; /* Adjust font size */
+  margin: 0; /* Remove default margin */
 }
 
+/* Button Styling */
 button {
   background-color: #b2e3c1;
   color: white;
@@ -186,6 +192,7 @@ button {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
   transition: all 0.3s ease;
   background-image: linear-gradient(145deg, #b2e3c1, #eaf7ee);
+  /* Reuse the button style mixin */
 }
 button:focus {
   outline: none;
@@ -200,20 +207,20 @@ button:active {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Mobile responsiveness */
+/* Mobile-first responsiveness */
 @media (max-width: 767px) {
   .banner {
-    height: 80px;
+    padding: 15px; /* Adjust padding for smaller screens */
   }
   .banner-item img {
-    width: 30px;
+    width: 30px; /* Smaller icons for mobile */
     height: 30px;
   }
   .banner-item p {
-    font-size: 1rem;
+    font-size: 1rem; /* Smaller font size for mobile */
   }
   button {
-    background-color: #b2e3c1;
+    background-color: #b2e3c1; /* Ensure the button uses main color */
   }
 }
 /* Banner with icons and text */
@@ -231,6 +238,79 @@ button:active {
                 <p>Free Lunch</p>
             </div>
         </div> */
+/* General styling for the input form */
+.input-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: #f8f8f8;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  max-width: 600px;
+  width: 100%;
+}
+
+.form-group {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+label {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 5px;
+  display: block;
+}
+
+input, select {
+  width: 100%;
+  padding: 5px;
+  margin-top: 5px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+input[type=tel], input[type=email], input[type=text], select {
+  height: 40px;
+}
+
+button.submit-button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 15px 32px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+button.submit-button:hover {
+  background-color: #45a049;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 767px) {
+  .input-form {
+    padding: 15px;
+  }
+  .form-group input, .form-group select {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+  button.submit-button {
+    padding: 12px 25px;
+    font-size: 0.9rem;
+  }
+}
+/* For additional styling like banner, navbar, etc., if needed */
+/* Add mobile styling for the navbar here if needed */
 /* Styling for h1 */
 h1 {
   color: #b2e3c1;

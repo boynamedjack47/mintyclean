@@ -1,45 +1,46 @@
 .content {
-    flex-grow: 1; // Allows the content to take the remaining space
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    background-image: url('/images/cover.jpg'); // Adjust the path as needed
+    justify-content: center; /* Vertically center the content */
+    align-items: center; /* Horizontally center the content */
+    
+    background-image: url('/images/cover.jpg'); /* Adjust the path as needed */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 
-    padding-top: 50%; // Adds spacing to push content below the navbar
-    height: calc(100vh - 26%); // Adjust height to subtract the navbar's height
+    padding: 50px 0; /* Adds vertical padding for spacing */
+    min-height: 100vh; /* Minimum height for content to ensure it's large enough */
 
     h1 {
         margin: 0;
         font-size: 2rem;
-        color: white;
+        color: black;
         text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
     }
-}
-
 
     #content-body {
         width: 100%;
         text-align: center;
-        color: white;
-        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+        color: black;
+        text-shadow: 0px 0px 0px rgba(0, 0, 0, 0.8);
     }
+}
 
 .page {
     display: flex;
     flex-direction: column;
-    height: 100vh; // Full viewport height
+    height: 100vh; /* Full viewport height */
 
     .navbar {
-        // Fixed height for navbar
-        z-index: 10; // Ensure it stays on top of the content
+        z-index: 10; /* Ensure it stays on top of the content */
     }
 
     .content {
-        flex-grow: 1; // Automatically fill the remaining space
+        flex-grow: 1; /* Automatically fill the remaining space */
+        display: flex; /* Use flexbox to align content */
+        flex-direction: column; /* Keep content in a column */
+        justify-content: center; /* Center vertically */
+        align-items: center; /* Center horizontally */
     }
 }
