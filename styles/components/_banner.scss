@@ -1,51 +1,72 @@
-@import '../variables';
+@import '../variables';  // Adjust the path as needed
 
+@import 'mixin';  
+@import '../variables';  // Ensure correct path to variables.scss
 
-/* Banner styling */
 .banner {
     display: flex;
-    justify-content: center; /* Center the logo horizontally */
-    align-items: center; /* Center the logo vertically */
-    background-color: $maingray; /* Add background color for the banner */
-    padding: 20px 0; /* Adjust padding to add spacing around the logo */
-    height: 75px; /* You can adjust the height as needed */
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(51, 51, 51, 0.9);
+    padding: 20px;
+    width: 100%;
 }
 
-/* Logo styling */
-.logo img {
-    max-width: 90%; /* Allow the image to scale to 90% of the banner's width */
-    height: auto; /* Maintain the aspect ratio */
-    max-height: 250px; /* Set a max height for the logo to make it larger but not exceed this size */
+.banner-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-/* Mobile (less than 768px) */
+.banner-item img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+}
+
+.banner-item p {
+    color: white;
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+button {
+   @include button-style($maincolor);
+}
+
+/* Mobile responsiveness */
 @media (max-width: 767px) {
     .banner {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 75px; /* Reduce banner height for mobile */
-        padding: 10px 0; /* Reduce padding on mobile */
+        height: 80px;
     }
 
-    .logo img {
-        max-width: 100%; /* Scale the logo to 80% of the banner width on mobile */
-        max-height: 150px; /* Adjust the max-height for the logo on mobile */
-    display: flex;
-    justify-content: center;
-   
+    .banner-item img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .banner-item p {
+        font-size: 1rem;
+    }
+
+    button {
+        background-color: $maincolor; // Ensure this rule is within media query
     }
 }
 
-/* Tablet and above (min-width: 768px) */
-@media (min-width: 768px) {
-    .banner {
-        height: 75px; /* Keep a larger height for tablets and above */
-        padding: 20px 0; /* Maintain padding for larger screens */
-    }
 
-    .logo img {
-        max-width: 90%; /* Keep the logo at 90% width for tablet and larger screens */
-        max-height: 250px; /* Keep max height for larger screens */
-    }
-}
+/* Banner with icons and text */
+/*     <div class="banner">
+            <div class="banner-item">
+                <img src="images/icon1.png" alt="Icon 1">
+                <p>Pricing</p>
+            </div>
+            <div class="banner-item">
+                <img src="images/icon2.png" alt="Icon 2">
+                <p>Price Lock</p>
+            </div>
+            <div class="banner-item">
+                <img src="images/icon3.png" alt="Icon 3">
+                <p>Free Lunch</p>
+            </div>
+        </div> */

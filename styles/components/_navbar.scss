@@ -15,8 +15,14 @@ body {
     justify-content: space-between;
     align-items: center;
     z-index: 10; /* Ensure it stays on top of other content */
-    backdrop-filter: blur(5px); /* Optional: Adds a slight blur effect behind the navbar */
+     backdrop-filter: blur(5px); /* Optional: Adds a slight blur effect behind the navbar */
     -webkit-backdrop-filter: blur(5px); /* Safari support */
+    transition: background-color 0.3s ease-in-out; /* Smooth transition for background */
+}
+
+/* Add background when scrolling */
+.navbar.scrolled {
+    background-color: rgba(51, 51, 51, 0.7); /* More opaque background when scrolled */
 }
 
 /* Logo */
@@ -69,7 +75,7 @@ body {
 @media (max-width: 767px) {
     /* Ensure navbar stays fixed and transparent */
     .navbar {
-        height: auto; /* Allow it to adjust for content */
+        height: 10%; /* Allow it to adjust for content */
         justify-content: center;
     }
 

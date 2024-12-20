@@ -1,6 +1,7 @@
 @import 'variables'; // Import variables
 @import 'components/navbar'; // Import navbar partial
 @import 'components/content';
+@import 'components/banner';
 /* Styling for h1 */
 h1 {
     color: $maincolor;

@@ -17,6 +17,12 @@ body {
   z-index: 10; /* Ensure it stays on top of other content */
   backdrop-filter: blur(5px); /* Optional: Adds a slight blur effect behind the navbar */
   -webkit-backdrop-filter: blur(5px); /* Safari support */
+  transition: background-color 0.3s ease-in-out; /* Smooth transition for background */
+}
+
+/* Add background when scrolling */
+.navbar.scrolled {
+  background-color: rgba(51, 51, 51, 0.7); /* More opaque background when scrolled */
 }
 
 /* Logo */
@@ -69,7 +75,7 @@ body {
 @media (max-width: 767px) {
   /* Ensure navbar stays fixed and transparent */
   .navbar {
-    height: auto; /* Allow it to adjust for content */
+    height: 10%; /* Allow it to adjust for content */
     justify-content: center;
   }
   /* Adjust navbar links when the menu is active */
@@ -113,7 +119,7 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  padding-top: 26%;
+  padding-top: 50%;
   height: calc(100vh - 26%);
 }
 .content h1 {
@@ -142,6 +148,89 @@ body {
   flex-grow: 1;
 }
 
+.banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(51, 51, 51, 0.9);
+  padding: 20px;
+  width: 100%;
+}
+
+.banner-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.banner-item img {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 10px;
+}
+
+.banner-item p {
+  color: white;
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+button {
+  background-color: #b2e3c1;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  background-image: linear-gradient(145deg, #b2e3c1, #eaf7ee);
+}
+button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(178, 227, 193, 0.5);
+}
+button:hover {
+  background-image: linear-gradient(145deg, #d7f1df, #8dd5a3);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2), 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+button:active {
+  transform: scale(0.98);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 767px) {
+  .banner {
+    height: 80px;
+  }
+  .banner-item img {
+    width: 30px;
+    height: 30px;
+  }
+  .banner-item p {
+    font-size: 1rem;
+  }
+  button {
+    background-color: #b2e3c1;
+  }
+}
+/* Banner with icons and text */
+/*     <div class="banner">
+            <div class="banner-item">
+                <img src="images/icon1.png" alt="Icon 1">
+                <p>Pricing</p>
+            </div>
+            <div class="banner-item">
+                <img src="images/icon2.png" alt="Icon 2">
+                <p>Price Lock</p>
+            </div>
+            <div class="banner-item">
+                <img src="images/icon3.png" alt="Icon 3">
+                <p>Free Lunch</p>
+            </div>
+        </div> */
 /* Styling for h1 */
 h1 {
   color: #b2e3c1;
