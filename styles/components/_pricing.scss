@@ -1,0 +1,144 @@
+@import '../variables';
+
+#pricing {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+}
+
+.pricing-slider {
+    margin-bottom: 30px;
+}
+
+#squareFootage {
+    width: 80%;
+    margin: 20px 0;
+    accent-color: $maincolor; /* This will change the thumb and active track to $maincolor */
+}
+
+.pricing-options {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.pricing-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.pricing-card.popular::before {
+    content: "MOST POPULAR";
+    background: #ff6347;
+    color: #fff;
+    padding: 5px 10px;
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+.pricing-card h3 {
+    margin-top: 0;
+    color: #333;
+}
+
+.pricing-card .price {
+    font-size: 24px;
+    color: $maincolor;
+    margin: 10px 0;
+}
+
+.pricing-card ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    color: #555;
+}
+
+.pricing-card ul li {
+    margin: 10px 0;
+}
+
+.book-now {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: $maincolor;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+
+.book-now:hover {
+    background: darken($maincolor, 15%);
+}
+
+// #squareFootage {
+//     width: 80%;
+//     margin: 20px 0;
+//     accent-color: $maincolor; /* For modern browsers */
+
+//     &::-webkit-slider-runnable-track {
+//         background-color: #ddd; /* Inactive part of the track */
+//         height: 5px;
+//     }
+
+//     &::-webkit-slider-thumb {
+//         -webkit-appearance: none;
+//         background-color: $maincolor; /* Active part (thumb) */
+//         width: 20px;
+//         height: 20px;
+//         border-radius: 50%;
+//         cursor: pointer;
+//     }
+
+//     &::-moz-range-thumb {
+//         background-color: $maincolor; /* Active part (thumb) for Firefox */
+//         width: 20px;
+//         height: 20px;
+//         border-radius: 50%;
+//         cursor: pointer;
+//     }
+
+//     &::-moz-range-track {
+//         background-color: #ddd; /* Inactive part of the track for Firefox */
+//         height: 5px;
+//     }
+
+//     &::-ms-thumb {
+//         background-color: $maincolor; /* Active part (thumb) for Edge */
+//         width: 20px;
+//         height: 20px;
+//         border-radius: 50%;
+//         cursor: pointer;
+//     }
+
+//     &::-ms-track {
+//         background-color: #ddd; /* Inactive part of the track for Edge */
+//         border-color: transparent;
+//         height: 5px;
+//     }
+
+//     /* Active track when the slider is moved */
+//     &::-webkit-slider-runnable-track {
+//         background: linear-gradient(to right, $maincolor 0%, $maincolor 50%, #ddd 50%);
+//     }
+
+//     &::-moz-range-progress {
+//         background-color: $maincolor; /* Firefox's active part of the track */
+//     }
+
+//     &::-ms-fill-lower {
+//         background-color: $maincolor; /* IE/Edge active part of the track */
+//     }
+// }
