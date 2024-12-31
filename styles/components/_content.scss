@@ -4,13 +4,13 @@
     justify-content: center; /* Vertically center the content */
     align-items: center; /* Horizontally center the content */
     
-    background-image: url('/images/cover.jpg'); /* Adjust the path as needed */
-    background-size: cover;
+    // background-image: url('/images/cover.jpg'); /* Adjust the path as needed */
+    background-size:contain;
     background-position: center;
     background-repeat: no-repeat;
 
-    padding: 50px 0; /* Adds vertical padding for spacing */
-    min-height: 100vh; /* Minimum height for content to ensure it's large enough */
+    // padding: 50px 0; /* Adds vertical padding for spacing */
+    // min-height: 100vh; /* Minimum height for content to ensure it's large enough */
 
     h1 {
         margin: 0;

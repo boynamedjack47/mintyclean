@@ -5,10 +5,11 @@
 @import 'components/input';
 @import 'components/photocard'; 
 @import 'components/pricing';
+@import 'components/typeofbusiness';
 /* Styling for h1 */
-h1 {
-    color: $maincolor;
-}
+// h1 {
+//     color: $maincolor;
+// }
 
 /* Styling for body */
 body {
@@ -20,12 +21,6 @@ body {
 .main {
     display: flex;
     flex-direction: column;
-}
-
-.content {
-    background-image: url(/images/cover.jpg);
-    background-size: cover;
-
 }
 
 html {
