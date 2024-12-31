@@ -10,7 +10,7 @@ body {
     position: fixed;
     height: 10%; /* Adjust this value based on the height of your navbar */
     width: 100%;
-    background-color: rgba(185, 182, 182, 0.5); /* Slightly transparent background */
+    background-color: rgba(185, 182, 182, 0); /* Slightly transparent background */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -22,7 +22,7 @@ body {
 
 /* Add background when scrolling */
 .navbar.scrolled {
-    background-color: rgba(185, 182, 182, 0.5); /* More opaque background when scrolled */
+    background-color: rgba(185, 182, 182, 0.7); /* More opaque background when scrolled */
 }
 
 /* Logo */
@@ -89,13 +89,13 @@ body {
         position: absolute;
         top: 100%; /* Start right after the navbar, zero gap */
         left: 0;
-        background-color: rgba(51, 51, 51, 0.9);
+        background-color: rgba(185, 182, 182, 0.7); 
         backdrop-filter: blur(10px); /* Optional: Extra blur for dropdown */
     }
 
     .navbar-links.active {
         display: flex; /* Show the links when the hamburger is clicked */
-        background-color: rgba(51, 51, 51, 0.7); /* Slightly transparent background */
+        background-color:rgba(185, 182, 182, 0.7); /* Slightly transparent background */
         backdrop-filter: blur(5px); /* Optional: Adds a slight blur effect behind the navbar */
         -webkit-backdrop-filter: blur(5px); /* Safari support */
     }
@@ -110,5 +110,71 @@ body {
         position: absolute;
         right: 20px; /* Adjust to move the hamburger icon to the right */
         top: 20px; /* Align with the navbar vertically */
+    }
+}
+
+/* Phone Number Styling */
+.phone-number {
+    font-size: 1.2rem;
+    color: white;
+    text-decoration: none;
+    margin: 0 auto; /* Center-align in the navbar */
+    padding: 10px 20px;
+    display: block;
+    text-align: center;
+}
+
+.phone-number:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Slight hover effect */
+    border-radius: 5px; /* Optional: Rounded effect on hover */
+}
+
+/* Adjust navbar layout for the phone number */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    height: 10%;
+    width: 100%;
+    background-color: rgba(185, 182, 182, 0); /* Slightly transparent background */
+    z-index: 10;
+    backdrop-filter: blur(5px); /* Optional: Adds a slight blur effect behind the navbar */
+    -webkit-backdrop-filter: blur(5px); /* Safari support */
+    transition: background-color 0.3s ease-in-out; /* Smooth transition for background */
+}
+
+/* Ensure proper layout on mobile */
+/* Ensure proper layout on mobile */
+@media (max-width: 767px) {
+    .navbar {
+        // flex-direction: column; /* Stack elements vertically on mobile */
+        align-items: center; /* Center-align items */
+        height: auto; /* Allow height to adjust based on content */
+        // padding: 10px 0; /* Add padding for spacing */
+    }
+
+    .phone-number {
+        margin: 10px 0; /* Add vertical spacing */
+        font-size: 1rem; /* Adjust font size for smaller screens */
+    }
+
+    .logo {
+        margin-bottom: 10px; /* Add spacing below the logo */
+    }
+
+    .hamburger {
+        position: static; /* Ensure hamburger icon is properly placed */
+        margin-top: 10px; /* Add spacing above the hamburger menu */
+    }
+
+    .navbar-links {
+        display: none; /* Initially hide links */
+        flex-direction: column; /* Stack links vertically */
+        width: 100%; /* Take full width */
+    }
+
+    .navbar-links.active {
+        display: flex; /* Show links when active */
     }
 }

@@ -4,11 +4,11 @@
 @import '../variables';  // Ensure correct path to variables.scss
 
 /* Banner Styling */
-.banner {
+.banner { 
     display: flex;
     justify-content: center; /* Center horizontally */
     align-items: center; /* Center vertically */
-    background-color: rgba(185, 182, 182, 0.5); /* Darker transparent background */
+    background-color: rgba(185, 182, 182, 0.5);  /* Darker transparent background */
    
     min-height: fit-content; /* Ensure a minimum height for the banner, if necessary */
     width: 100%;
@@ -18,7 +18,7 @@
     display: flex;
     flex-direction: column;
     align-items: center; /* Center the content inside the item */
-    color: white; /* Set text color to white */
+    color: black; /* Set text color to white */
     margin: 0 20px; /* Add spacing between banner items */
 }
 

@@ -10,7 +10,7 @@ body {
   position: fixed;
   height: 10%; /* Adjust this value based on the height of your navbar */
   width: 100%;
-  background-color: rgba(185, 182, 182, 0.5); /* Slightly transparent background */
+  background-color: rgba(185, 182, 182, 0); /* Slightly transparent background */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -22,7 +22,7 @@ body {
 
 /* Add background when scrolling */
 .navbar.scrolled {
-  background-color: rgba(185, 182, 182, 0.5); /* More opaque background when scrolled */
+  background-color: rgba(185, 182, 182, 0.7); /* More opaque background when scrolled */
 }
 
 /* Logo */
@@ -88,13 +88,13 @@ body {
     position: absolute;
     top: 100%; /* Start right after the navbar, zero gap */
     left: 0;
-    background-color: rgba(51, 51, 51, 0.9);
+    background-color: rgba(185, 182, 182, 0.7);
     -webkit-backdrop-filter: blur(10px);
             backdrop-filter: blur(10px); /* Optional: Extra blur for dropdown */
   }
   .navbar-links.active {
     display: flex; /* Show the links when the hamburger is clicked */
-    background-color: rgba(51, 51, 51, 0.7); /* Slightly transparent background */
+    background-color: rgba(185, 182, 182, 0.7); /* Slightly transparent background */
     backdrop-filter: blur(5px); /* Optional: Adds a slight blur effect behind the navbar */
     -webkit-backdrop-filter: blur(5px); /* Safari support */
   }
@@ -109,14 +109,71 @@ body {
     top: 20px; /* Align with the navbar vertically */
   }
 }
+/* Phone Number Styling */
+.phone-number {
+  font-size: 1.2rem;
+  color: white;
+  text-decoration: none;
+  margin: 0 auto; /* Center-align in the navbar */
+  padding: 10px 20px;
+  display: block;
+  text-align: center;
+}
+
+.phone-number:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* Slight hover effect */
+  border-radius: 5px; /* Optional: Rounded effect on hover */
+}
+
+/* Adjust navbar layout for the phone number */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  height: 10%;
+  width: 100%;
+  background-color: rgba(185, 182, 182, 0); /* Slightly transparent background */
+  z-index: 10;
+  backdrop-filter: blur(5px); /* Optional: Adds a slight blur effect behind the navbar */
+  -webkit-backdrop-filter: blur(5px); /* Safari support */
+  transition: background-color 0.3s ease-in-out; /* Smooth transition for background */
+}
+
+/* Ensure proper layout on mobile */
+/* Ensure proper layout on mobile */
+@media (max-width: 767px) {
+  .navbar {
+    align-items: center; /* Center-align items */
+    height: auto; /* Allow height to adjust based on content */
+  }
+  .phone-number {
+    margin: 10px 0; /* Add vertical spacing */
+    font-size: 1rem; /* Adjust font size for smaller screens */
+  }
+  .logo {
+    margin-bottom: 10px; /* Add spacing below the logo */
+  }
+  .hamburger {
+    position: static; /* Ensure hamburger icon is properly placed */
+    margin-top: 10px; /* Add spacing above the hamburger menu */
+  }
+  .navbar-links {
+    display: none; /* Initially hide links */
+    flex-direction: column; /* Stack links vertically */
+    width: 100%; /* Take full width */
+  }
+  .navbar-links.active {
+    display: flex; /* Show links when active */
+  }
+}
 .content {
   display: flex;
   flex-direction: column;
   justify-content: center; /* Vertically center the content */
   align-items: center; /* Horizontally center the content */
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
+  background-color: rgba(185, 182, 182, 0.5);
+  min-height: 100vh; /* Minimum height for content to ensure it's large enough */
 }
 .content h1 {
   margin: 0;
@@ -162,7 +219,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center; /* Center the content inside the item */
-  color: white; /* Set text color to white */
+  color: black; /* Set text color to white */
   margin: 0 20px; /* Add spacing between banner items */
 }
 
@@ -312,11 +369,10 @@ button.submit-button:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: rgba(185, 182, 182, 0.5);
 }
 .banner.photo-banner .banner-item {
   text-align: center;
-  color: white;
+  color: black;
   margin-bottom: 20px;
 }
 .banner.photo-banner .banner-item h2 {
@@ -476,23 +532,22 @@ button.submit-button:hover {
     flex-direction: row;
   }
 }
-#business-types {
+.business-type {
   text-align: center;
-  padding: 50px 20px;
-  background-color: #f9f9f9;
+  background-color: rgba(185, 182, 182, 0.5);
 }
-#business-types h2 {
+.business-type h2 {
   font-size: 2rem;
   margin-bottom: 30px;
   color: #333;
 }
-#business-types .business-types-container {
+.business-type .business-types-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
 }
-#business-types .business-type {
+.business-type .business-type {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -505,21 +560,21 @@ button.submit-button:hover {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s, box-shadow 0.3s;
 }
-#business-types .business-type:hover {
+.business-type .business-type:hover {
   transform: scale(1.05);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
-#business-types .business-type i {
+.business-type .business-type i {
   font-size: 2rem;
   color: #5AD55A; /* Replace $maincolor with your primary color */
   margin-bottom: 15px;
 }
-#business-types .business-type span {
+.business-type .business-type span {
   font-size: 1rem;
   color: #333;
   text-align: center;
 }
-#business-types .business-type a {
+.business-type .business-type a {
   text-decoration: none;
 }
 

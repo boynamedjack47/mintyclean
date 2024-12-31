@@ -1,7 +1,9 @@
-#business-types {
+@import '../variables'; 
+
+.business-type {
     text-align: center;
-    padding: 50px 20px;
-    background-color: #f9f9f9;
+    // padding: 50px 20px;
+    background-color: $mainbackground;
   
     h2 {
       font-size: 2rem;
