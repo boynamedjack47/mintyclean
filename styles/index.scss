@@ -58,11 +58,33 @@ html {
 }
 .content1 {
     background-image: url("/mintyclean/images/Images/cover1.jpg");
-
+justify-content: center;
  /* Adjust the path as needed */
     background-size:cover; 
     background-position: center; 
     background-repeat: no-repeat;
     padding: 50px 0; /* Adds vertical padding for spacing */
     min-height: 100vh;/* Minimum height for content to ensure it's large enough */ 
+    align-items: center;    /* Centers vertically */
+    flex-direction: column; /* Stacks elements vertically */
+    display: flex;
 }  
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9); /* Optional: Slightly shrink for a smooth pop-in effect */
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Logo styling */
+.logo-fade-in {
+    max-width:500px; /* Adjust size as needed */
+    animation: fadeIn 1.5s ease-in-out; /* Fade in over 1.5 seconds */
+    opacity: 1; /* Ensure visibility after the animation */
+}
