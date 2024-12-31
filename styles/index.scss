@@ -56,3 +56,11 @@ html {
 .return-to-top:focus {
     outline: none;
 }
+.content1 {
+    background-image: url(/images/Images/cover1.jpg); /* Adjust the path as needed */
+    background-size:cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    padding: 50px 0; /* Adds vertical padding for spacing */
+    min-height: 100vh;/* Minimum height for content to ensure it's large enough */ 
+}  
