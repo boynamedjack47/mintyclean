@@ -34,8 +34,10 @@
     }
 }
 
-@media (min-width: 768px) {
 
 
-    .content1 { padding-top: 100px; }
- }
+@media (max-width: 768px) {
+    .content1 {
+        padding-top: 175px; /* Adjust margin for larger screens */
+    }
+}
