@@ -5,7 +5,7 @@
     text-align: left; /* Align text to the left for professionalism */
     font-family: 'Arial', sans-serif; /* Set a clean, professional font */
     line-height: 1.6; /* Increase line spacing for readability */
-    background-color: rgba(185, 182, 182, 1) !important; /* Use your main background color */
+    background-color: white !important; /* Use your main background color */
     border-radius: 10px; /* Add a slight curve for modern design */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a light shadow for depth */
     background-image: none;
@@ -38,7 +38,7 @@
 
 @media (max-width: 768px) {
     .content1 {
-        padding-top: 80px; /* Adjust top padding for the navbar height */
+        padding-top: 0px; /* Adjust top padding for the navbar height */
         min-height: calc(190vh - 0px); /* Ensure full viewport height minus navbar */
 
     }
@@ -46,4 +46,8 @@
     .content1 h1 {
         margin-top: 10px; /* Add slight margin for better spacing */
     }
+}
+
+.navbar {
+    background-color: rgba(185, 182, 182, 0.5);
 }
