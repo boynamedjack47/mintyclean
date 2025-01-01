@@ -2,7 +2,7 @@
 
 .business-type {
     text-align: center;
-    background-color: rgba(185,182,182,  0);
+    background-color: rgba(185,182,182, 0);
   
     h2 {
       font-size: 2rem;
@@ -11,7 +11,7 @@
     }
   
     .business-types-container {
-      display: flex;
+      display: flex; /* Default is flex for desktop */
       flex-wrap: wrap;
       justify-content: center;
       gap: 20px;
@@ -55,21 +55,25 @@
 
 /* Mobile-first responsiveness */
 @media (max-width: 767px) {
-    .business-type {
-        width: 120px; /* Reduce width for mobile */
-        padding: 15px; /* Adjust padding */
-    }
-
     .business-types-container {
-        flex-direction: column; /* Stack items vertically */
-        align-items: center; /* Center the items */
+        display: grid; /* Switch to grid for mobile */
+        grid-template-columns: repeat(2, 1fr); /* Create 2x2 grid */
+        gap: 20px; /* Maintain spacing */
+        justify-content: center; /* Center grid in container */
+    }
+  
+    .business-type {
+        width: 100%; /* Make each item stretch in grid */
+        max-width: 140px; /* Optional: Control max width */
+        padding: 15px; /* Adjust padding */
+        display: contents;
     }
   
     .business-type i {
-        font-size: 1.5rem; /* Smaller icons */
+        font-size: 2rem; /* Adjust icon size */
     }
 
     .business-type span {
-        font-size: 0.9rem; /* Smaller font size */
+        font-size: 0.9rem; /* Smaller font size for mobile */
     }
 }
