@@ -33,3 +33,9 @@
         font-size: 1.2rem; /* Increase paragraph size for readability */
     }
 }
+
+@media (min-width: 768px) {
+
+
+    .content1 { padding-top: 100px; }
+ }
