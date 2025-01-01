@@ -1,3 +1,8 @@
 .content {
-    background-image: url(/images/.jpeg);
+    background-image: url(/images/Images/image4.jpeg);
+    background-size:cover; 
+     background-position: center; 
+     background-repeat: no-repeat;
+     padding: 50px 0; /* Adds vertical padding for spacing */
+     min-height: 100vh;/* Minimum height for content to ensure it's large enough */ 
 }

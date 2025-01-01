@@ -2,7 +2,6 @@
 
 .business-type {
     text-align: center;
-    // padding: 50px 20px;
     background-color: rgba(185,182,182,  0);
   
     h2 {
@@ -52,5 +51,25 @@
         text-decoration: none;
       }
     }
-  }
+}
+
+/* Mobile-first responsiveness */
+@media (max-width: 767px) {
+    .business-type {
+        width: 120px; /* Reduce width for mobile */
+        padding: 15px; /* Adjust padding */
+    }
+
+    .business-types-container {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center the items */
+    }
   
+    .business-type i {
+        font-size: 1.5rem; /* Smaller icons */
+    }
+
+    .business-type span {
+        font-size: 0.9rem; /* Smaller font size */
+    }
+}

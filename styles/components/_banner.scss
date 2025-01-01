@@ -1,5 +1,4 @@
 @import '../variables';  // Ensure correct path to variables.scss
-
 @import 'mixin';  
 @import '../variables';  // Ensure correct path to variables.scss
 
@@ -8,18 +7,20 @@
     display: flex;
     justify-content: center; /* Center horizontally */
     align-items: center; /* Center vertically */
-    background-color: rgba(185, 182, 182, .5);  /* Darker transparent background */
-   
-    min-height: fit-content; /* Ensure a minimum height for the banner, if necessary */
+    background-color: rgba(185, 182, 182, 0.5);  /* Darker transparent background */
+    min-height: fit-content; /* Ensure a minimum height for the banner */
     width: 100%;
+    flex-wrap: wrap; /* Allow items to wrap */
+    padding: 20px 0; /* Add some padding */
 }
 
 .banner-item {
     display: flex;
     flex-direction: column;
     align-items: center; /* Center the content inside the item */
-    color: black; /* Set text color to white */
+    color: black; /* Set text color */
     margin: 0 20px; /* Add spacing between banner items */
+    text-align: center; /* Center the text */
 }
 
 .banner-item img {
@@ -33,15 +34,20 @@
     margin: 0; /* Remove default margin */
 }
 
-/* Button Styling */
 button {
-   @include button-style($maincolor); /* Reuse the button style mixin */
-}
+    @include button-style($maincolor); /* Reuse the button style mixin */
+ }
 
 /* Mobile-first responsiveness */
 @media (max-width: 767px) {
     .banner {
-        padding: 0px; /* Adjust padding for smaller screens */
+        flex-direction: column; /* Stack items vertically */
+        padding: 10px 0; /* Adjust padding for mobile */
+    }
+
+    .banner-item {
+        margin: 10px 0; /* Space between items */
+        width: 80%; /* Make each banner item take up most of the width */
     }
 
     .banner-item img {
@@ -57,20 +63,3 @@ button {
         background-color: $maincolor; /* Ensure the button uses main color */
     }
 }
-
-
-/* Banner with icons and text */
-/*     <div class="banner">
-            <div class="banner-item">
-                <img src="images/icon1.png" alt="Icon 1">
-                <p>Pricing</p>
-            </div>
-            <div class="banner-item">
-                <img src="images/icon2.png" alt="Icon 2">
-                <p>Price Lock</p>
-            </div>
-            <div class="banner-item">
-                <img src="images/icon3.png" alt="Icon 3">
-                <p>Free Lunch</p>
-            </div>
-        </div> */

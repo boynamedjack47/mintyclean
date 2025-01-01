@@ -180,16 +180,19 @@ body {
   align-items: center; /* Center vertically */
   background-color: rgba(185, 182, 182, 0.5); /* Darker transparent background */
   min-height: -moz-fit-content;
-  min-height: fit-content; /* Ensure a minimum height for the banner, if necessary */
+  min-height: fit-content; /* Ensure a minimum height for the banner */
   width: 100%;
+  flex-wrap: wrap; /* Allow items to wrap */
+  padding: 20px 0; /* Add some padding */
 }
 
 .banner-item {
   display: flex;
   flex-direction: column;
   align-items: center; /* Center the content inside the item */
-  color: black; /* Set text color to white */
+  color: black; /* Set text color */
   margin: 0 20px; /* Add spacing between banner items */
+  text-align: center; /* Center the text */
 }
 
 .banner-item img {
@@ -203,7 +206,6 @@ body {
   margin: 0; /* Remove default margin */
 }
 
-/* Button Styling */
 button {
   background-color: #5AD55A;
   color: white;
@@ -233,7 +235,12 @@ button:active {
 /* Mobile-first responsiveness */
 @media (max-width: 767px) {
   .banner {
-    padding: 0px; /* Adjust padding for smaller screens */
+    flex-direction: column; /* Stack items vertically */
+    padding: 10px 0; /* Adjust padding for mobile */
+  }
+  .banner-item {
+    margin: 10px 0; /* Space between items */
+    width: 80%; /* Make each banner item take up most of the width */
   }
   .banner-item img {
     width: 30px; /* Smaller icons for mobile */
@@ -246,21 +253,6 @@ button:active {
     background-color: #5AD55A; /* Ensure the button uses main color */
   }
 }
-/* Banner with icons and text */
-/*     <div class="banner">
-            <div class="banner-item">
-                <img src="images/icon1.png" alt="Icon 1">
-                <p>Pricing</p>
-            </div>
-            <div class="banner-item">
-                <img src="images/icon2.png" alt="Icon 2">
-                <p>Price Lock</p>
-            </div>
-            <div class="banner-item">
-                <img src="images/icon3.png" alt="Icon 3">
-                <p>Free Lunch</p>
-            </div>
-        </div> */
 /* General styling for the input form */
 .input-form {
   display: flex;
@@ -547,6 +539,23 @@ button.submit-button:hover {
   text-decoration: none;
 }
 
+/* Mobile-first responsiveness */
+@media (max-width: 767px) {
+  .business-type {
+    width: 120px; /* Reduce width for mobile */
+    padding: 15px; /* Adjust padding */
+  }
+  .business-types-container {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center the items */
+  }
+  .business-type i {
+    font-size: 1.5rem; /* Smaller icons */
+  }
+  .business-type span {
+    font-size: 0.9rem; /* Smaller font size */
+  }
+}
 /* Styling for h1 */
 /* Styling for body */
 body {

@@ -1,5 +1,13 @@
 .content {
  
-    background-color:white ;
+    margin: 50px auto;
+    background-color:rgba(185, 182, 182, 0);;
     background-image: none;
+    padding-bottom: 175px;
+
+}
+
+.page {
+    height: 150vh;
+    background-color: rgba(185, 182, 182, 0.5);;
 }
