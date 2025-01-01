@@ -88,3 +88,10 @@ justify-content: center;
     animation: fadeIn 1.5s ease-in-out; /* Fade in over 1.5 seconds */
     opacity: 1; /* Ensure visibility after the animation */
 }
+
+@media (max-width: 767px) {
+    .content1 {
+        background-size: contain; /* Ensure the full image is visible */
+        background-position: center center; /* Keep the image centered */
+    }
+}
