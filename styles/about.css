@@ -8,6 +8,7 @@
     background-color: rgba(185, 182, 182, 1) !important; /* Use your main background color */
     border-radius: 10px; /* Add a slight curve for modern design */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a light shadow for depth */
+    background-image: none;
 }
 
 .content1 h1 {
