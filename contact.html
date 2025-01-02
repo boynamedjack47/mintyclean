@@ -16,6 +16,10 @@
                 <img src="images/logo.png" alt="Logo">
             </a>
         </div>
+        <a href="tel:+480-487-2784" class="phone-number">
+            <i class="fas fa-phone-alt"></i> <!-- Font Awesome phone icon -->
+            <span class="phone-text">480-487-2784</span> <!-- Actual phone number (visible only on desktop) -->
+        </a>
         <button class="hamburger" aria-label="Toggle navigation">
             <span></span>
             <span></span>
@@ -37,47 +41,78 @@
                 <p>Fill out the form and we will get in touch with you as soon as possible!</p>
             </div>
             <!-- Form Section -->
-             <div class="input-form">
-                <form action="https://formspree.io/f/mrbbzevy" method="POST">
-                    <div class="form-group">
-                        <label for="full-name">Full Name</label>
-                        <input type="text" id="full-name" name="full-name" placeholder="Enter your full name" required>
-                    </div>
-                
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
-                    </div>
-                
-                    <div class="form-group">
-                        <label for="phone-number">Phone Number</label>
-                        <input type="tel" id="phone-number" name="phone-number" placeholder="Enter your phone number" required>
-                    </div>
-                
-                    <div class="form-group">
-                        <label for="address">Full Address</label>
-                        <input type="text" id="address" name="address" placeholder="Enter your address" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="sqft">Aproximate Square Feet of home</label>
-                        <input type="number" id="sqft" name="sqft" placeholder="" required>
-                    </div>
-                
-                    <div class="form-group">
-                        <label for="select-service">Select a Service</label>
-                        <select id="select-service" name="select-service" required>
-                            <option value="" disabled selected>Select a service</option>
-                            <option value="example-1">One time cleaning</option>
-                            <option value="example-2">12 Month package</option>
-                            <option value="example-3">6 month package</option>
-                            <option value="example-4">Other</option>
-                        </select>
-                    </div>
-                
-                    <button type="submit">Submit</button>
+            <div class="input-form">
+                <form
+                  action="https://formspree.io/f/mannlwgw"
+                  method="POST"
+                >
+                  <div class="form-group">
+                    <label for="full-name">Full Name</label>
+                    <input
+                      type="text"
+                      id="full-name"
+                      name="full-name"
+                      placeholder="Enter your full name"
+                      required
+                    />
+                  </div>
+              
+                  <div class="form-group">
+                    <label for="email">Email</label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      placeholder="Enter your email"
+                      required
+                    />
+                  </div>
+              
+                  <div class="form-group">
+                    <label for="phone-number">Phone Number</label>
+                    <input
+                      type="tel"
+                      id="phone-number"
+                      name="phone-number"
+                      placeholder="Enter your phone number"
+                      required
+                    />
+                  </div>
+              
+                  <div class="form-group">
+                    <label for="address">Full Address</label>
+                    <input
+                      type="text"
+                      id="address"
+                      name="address"
+                      placeholder="Enter your address"
+                      required
+                    />
+                  </div>
+              
+                  <div class="form-group">
+                    <label for="property-type">Property Type</label>
+                    <select id="property-type" name="property-type" required>
+                      <option value="" disabled selected>Select property type</option>
+                      <option value="commercial">Commercial</option>
+                      <option value="residential">Residential</option>
+                    </select>
+                  </div>
+              
+                  <div class="form-group">
+                    <label for="select-service">Select a Service</label>
+                    <select id="select-service" name="select-service" required>
+                      <option value="" disabled selected>Select a service</option>
+                      <option value="example-1">One time cleaning</option>
+                      <option value="example-2">12 Month package</option>
+                      <option value="example-3">6 month package</option>
+                      <option value="example-4">Other</option>
+                    </select>
+                  </div>
+              
+                  <button type="submit">Submit</button>
                 </form>
-        </div>
+              </div>
         </div>
 
         
@@ -90,6 +125,7 @@
     </div>
 
     <script src="scripts/app.js"></script>
+    <script>src="scripts/form.js"</script>
     <button id="returnToTop" class="return-to-top" aria-label="Return to Top">&#8593;</button>
 </body>
 </html>

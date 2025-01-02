@@ -1,3 +1,11 @@
 .content1 {
     background-image: url('../images/Images/image6.jpeg');
 }
+
+.highlight {
+    color: white;
+ }
+
+ .content1 img {
+    width: 500px;
+ }

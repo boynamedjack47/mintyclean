@@ -331,19 +331,21 @@ button.submit-button:hover {
   flex-direction: column;
   align-items: center;
 }
-.banner.photo-banner .banner-item {
+
+.banner-item {
   text-align: center;
   color: black;
   margin-bottom: 20px;
 }
-.banner.photo-banner .banner-item h2 {
+.banner-item h2 {
   font-size: 2rem;
   margin-bottom: 10px;
 }
-.banner.photo-banner .banner-item p {
-  font-size: 1.2rem;
+.banner-item p {
+  font-size: 1rem;
 }
-.banner.photo-banner .photo-card {
+
+.photo-card {
   position: relative;
   margin: 10px;
   border-radius: 10px;
@@ -351,14 +353,14 @@ button.submit-button:hover {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease;
 }
-.banner.photo-banner .photo-card img {
+.photo-card img {
   width: 100%;
   height: auto;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 10px;
 }
-.banner.photo-banner .photo-card .photo-card-hover {
+.photo-card .photo-card-hover {
   position: absolute;
   top: 0;
   left: 0;
@@ -374,33 +376,33 @@ button.submit-button:hover {
   text-align: center;
   padding: 10px;
   transition: opacity 0.3s ease;
+  text-decoration: none; /* Remove underline from the link */
 }
-.banner.photo-banner .photo-card .photo-card-hover h3 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
+.photo-card:hover {
+  transform: scale(1.02);
 }
-.banner.photo-banner .photo-card .photo-card-hover p {
-  font-size: 1rem;
-}
-.banner.photo-banner .photo-card:hover {
-  transform: scale(1.05);
-}
-.banner.photo-banner .photo-card:hover .photo-card-hover {
+.photo-card:hover .photo-card-hover {
   opacity: 1;
 }
+
 @media (min-width: 768px) {
   .banner.photo-banner {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
   }
-  .banner.photo-banner .banner-item {
+  .banner-item {
     flex: 1 1 100%;
   }
-  .banner.photo-banner .photo-card {
+  .photo-card {
     flex: 1 1 calc(30% - 20px);
     margin: 10px;
   }
+}
+.photo-card-hover p {
+  font-size: 0.9rem; /* Decrease the font size slightly */
+  line-height: 1.4; /* Adjust line height for better readability */
+  margin: 0; /* Remove extra margins to save space */
 }
 
 #pricing {
